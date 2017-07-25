@@ -2,13 +2,11 @@
 
 # Laundromat app
 
-library(shiny)
-library(shinythemes)
-library(DT); library(data.table)
+library(shiny); library(shinythemes)
 
 fluidPage(
-    titlePanel("Laundromat Date/Time Usage Analysis"),
     theme = "spacelab",
+    titlePanel("Uploading Files"),
     sidebarLayout(
         sidebarPanel(
             fileInput('file1', 'Choose CSV File',
@@ -29,7 +27,8 @@ fluidPage(
                          '"')
         ),
         mainPanel(
-            dataTableOutput('contents')
+            dataTableOutput('clean')
         )
     )
 )
+
